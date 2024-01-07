@@ -15,6 +15,13 @@ public class ImprimindoObjetos {
         }
 
         System.out.println("\nUsando Iterator:");
+        /*
+        Iterator é uma interface com dois métodos
+         - hasNext(): boolean
+            retorna true ou false dependendo se tem mais item na iteração.
+         - next():
+            retorna o próximo elemento da iteração.
+         */
         Iterator<String> iterator = aprovados.iterator();
         while (iterator.hasNext()) {
             System.out.println(iterator.next());
@@ -22,8 +29,7 @@ public class ImprimindoObjetos {
 
         System.out.println("\nUsando Stream:");
         /*
-        Iteração ocorre de forma interna
-        Nao sendo necessário código explícito para iterar
+        Iteração ocorre de forma interna nao sendo necessário código explícito para iterar
         */
         Stream<String> stream = aprovados.stream();
         stream.forEach(System.out::println);
